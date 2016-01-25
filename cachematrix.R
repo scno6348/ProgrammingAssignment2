@@ -1,4 +1,5 @@
 ## Part One: Creating a 2 by 2 matrix 
+## After the 2 by two matrix is created. The function creates a special matrix object. 
 
 a <- makeCacheMatrix ()
 a$set(matrix(1:4,2,2))
@@ -17,6 +18,8 @@ makeCacheMatrix <- function(x = matrix()) {
        getmatrix=getmatrix)
 }
 ## Part Two. Solving for the inverse of said matrix. 
+## This function calculates the inverse of the matrix. If the inverse of the matrix 
+## has already been calculated then the fucntion will retrive it from the cache instead of calculating it again.  
 
 cacheSolve <- function(x=matrix(), ...) {
   m<-x$getmatrix()
